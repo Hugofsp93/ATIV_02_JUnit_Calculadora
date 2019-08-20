@@ -1,0 +1,26 @@
+<%= form_with(model: calc, local: true) do |form| %>
+  <% if calc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(calc.errors.count, "error") %> prohibited this calc from being saved:</h2>
+
+      <ul>
+      <% calc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= form.label :dividend %>
+    <%= form.number_field :dividend %>
+  </div>
+  <div class="field">
+    <%= form.label :divider %>
+    <%= form.number_field :divider %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
