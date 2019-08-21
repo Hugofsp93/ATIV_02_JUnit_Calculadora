@@ -25,8 +25,8 @@ class CalcsController < ApplicationController
   # POST /calcs.json
   def create
     @calc = Calc.new(calc_params)
-    # @calc.quotient = @calc.dividend / @calc.divider
-    # @calc.save
+    @calc.quotient = @calc.dividend / @calc.divider
+    @calc.save
     respond_to do |format|
       if @calc.save
         format.html { redirect_to @calc, notice: 'Calc was successfully created.' }
@@ -41,6 +41,8 @@ class CalcsController < ApplicationController
   # PATCH/PUT /calcs/1
   # PATCH/PUT /calcs/1.json
   def update
+    @calc.quotient = @calc.dividend / @calc.divider
+    @calc.save
     respond_to do |format|
       if @calc.update(calc_params)
         format.html { redirect_to @calc, notice: 'Calc was successfully updated.' }
