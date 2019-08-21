@@ -5,6 +5,23 @@ RSpec.describe Calc, type: :model do
 
   before(:all) do
     @calc1 = create(:calc)
+    puts "Iniciando testes unitários"
+  end
+
+  before(:each) do
+    (1..5).each do |a|
+      puts "Iniciando testes"
+    end
+  end
+
+  after(:each) do
+    (1..5).each do |a|
+      puts "Teste 0" + "#{a}" + " realizado"
+    end
+  end
+
+  after(:all) do
+    puts "Testes realizados, veja os resultados"
   end
 
   it "is valid with valid attributes" do

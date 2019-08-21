@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Testes implementados no arquivo spec/models/calc_spec.rb
 
-Things you may want to cover:
+Métodos implementados no app/models/calc.rb
+* Somar
+* Dividir
+* Raiz Quadrada
 
-* Ruby version
+Conceitos aplicados:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* before(:all) # antes de todos os testes
+* before(:each) # antes de cada teste
+* after(:all) # depois de todos os testes
+* after(:each) # depois de cada teste
