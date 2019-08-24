@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :anagrams
   resources :palindromes
   resources :ordenators
   resources :calcs

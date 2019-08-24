@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Palindrome, type: :model do
   
   before(:all) do
-    @ordenator1 = create(:ordenator)
+    @palindrome1 = create(:palindrome)
     puts "Iniciando testes"
   end
 

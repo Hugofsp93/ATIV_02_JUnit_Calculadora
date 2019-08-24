@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Anagrams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word one</th>
+      <th>Word two</th>
+      <th>Is anagram</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anagrams.each do |anagram| %>
+      <tr>
+        <td><%= anagram.word_one %></td>
+        <td><%= anagram.word_two %></td>
+        <td><%= anagram.is_anagram %></td>
+        <td><%= link_to 'Show', anagram %></td>
+        <td><%= link_to 'Edit', edit_anagram_path(anagram) %></td>
+        <td><%= link_to 'Destroy', anagram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anagram', new_anagram_path %>
