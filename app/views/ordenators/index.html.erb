@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ordenators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ordenators.each do |ordenator| %>
+      <tr>
+        <td><%= ordenator.value %></td>
+        <td><%= link_to 'Show', ordenator %></td>
+        <td><%= link_to 'Edit', edit_ordenator_path(ordenator) %></td>
+        <td><%= link_to 'Destroy', ordenator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <br>
+    <% numbers = Ordenator.all %>
+    <% if numbers.present? %>
+      <tr>
+      <% max_value = numbers.max_by { |max| max[:value] }[:value] %>
+      <td>Maior Valor: <%= max_value %></td>
+    </tr>
+    <% else %>
+      <tr>
+        <td>Não há números cadastrados!</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ordenator', new_ordenator_path %>
+<%= link_to 'Back', root_path %>

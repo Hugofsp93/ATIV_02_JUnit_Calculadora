@@ -1,17 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Calc, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-
+  
   before(:all) do
     @calc1 = create(:calc)
     puts "Iniciando testes unitários"
   end
 
   before(:each) do
-    (1..5).each do |a|
-      puts "Iniciando testes"
-    end
+    puts "Iniciando testes"
   end
 
   after(:each) do
@@ -21,7 +18,7 @@ RSpec.describe Calc, type: :model do
   end
 
   after(:all) do
-    puts "Testes realizados, veja os resultados"
+    puts "Testes realizados, veja os resultados:"
   end
 
   it "is valid with valid attributes" do

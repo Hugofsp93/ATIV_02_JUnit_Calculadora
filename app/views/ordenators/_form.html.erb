@@ -1,0 +1,22 @@
+<%= form_with(model: ordenator, local: true) do |form| %>
+  <% if ordenator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ordenator.errors.count, "error") %> prohibited this ordenator from being saved:</h2>
+
+      <ul>
+      <% ordenator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.number_field :value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
