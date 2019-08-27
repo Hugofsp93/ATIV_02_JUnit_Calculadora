@@ -8,11 +8,38 @@ RSpec.describe Ordenator, type: :model do
   end
 
   before(:each) do
-    puts "Iniciando testes"
+    puts "Teste da classe ordenator"
   end
 
-  it "soma" do
+  it "inserir_colecao" do
     ordenator = Ordenator.new
-    expect(ordenator.soma(2, 3)).to eql(5)
+    expect(ordenator.inserir_colecao(2))
+  end
+
+  it "informar_valor" do
+    ordenators = Ordenator.all
+    max_value = ordenators.max_by { |max| max[:value] }[:value]
+    ordenator = Ordenator.new
+    expect(ordenator.informar_valor(10) == max_value)
+  end
+
+  it "maior_valor" do
+    ordenator = Ordenator.new
+    expect(ordenator.maior_valor(1921))
+  end
+
+  it "menor_valor" do
+    ordenator = Ordenator.new
+    expect(ordenator.menor_valor(312))
+  end
+
+  it "valor_medio" do
+    ordenator = Ordenator.new
+    expect(ordenator.valor_medio)
+  end
+
+  it "valor_mediana" do
+    ordenator = Ordenator.new
+    expect(ordenator.valor_mediana)
   end
 end
