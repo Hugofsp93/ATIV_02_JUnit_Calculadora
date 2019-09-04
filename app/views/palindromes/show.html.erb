@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phrase:</strong>
+  <%= @palindrome.phrase %>
+</p>
+
+<p>
+  <strong>Is palindrome:</strong>
+  <%= @palindrome.is_palindrome %>
+</p>
+
+<%= link_to 'Edit', edit_palindrome_path(@palindrome) %> |
+<%= link_to 'Back', palindromes_path %>
