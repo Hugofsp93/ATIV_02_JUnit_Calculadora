@@ -31,3 +31,11 @@
     * menor_valor(paramaetro)
     * valor_medio
     * valor_mediana
+
+- Atividade 4
+
+  Testes implementados no arquivo spec/models/palindrome_spec.rb
+    * is_palindrome
+
+  Métodos implementados no app/models/palindrome.rb
+    * is_palindrome(paramaetro)
