@@ -15,11 +15,12 @@
 # gem 'pg'
 #
 default: &default
+  host: ''
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
 
 development:
   <<: *default
@@ -82,4 +83,4 @@ production:
   <<: *default
   database: calculadora_production
   username: calculadora
-  password: <%= ENV['CALCULADORA_DATABASE_PASSWORD'] %>
+  password: lklklklk

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Triangles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>L1</th>
+      <th>L2</th>
+      <th>L3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @triangles.each do |triangle| %>
+      <tr>
+        <td><%= triangle.l1 %></td>
+        <td><%= triangle.l2 %></td>
+        <td><%= triangle.l3 %></td>
+        <td><%= link_to 'Show', triangle %></td>
+        <td><%= link_to 'Edit', edit_triangle_path(triangle) %></td>
+        <td><%= link_to 'Destroy', triangle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Triangle', new_triangle_path %>

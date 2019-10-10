@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>L1:</strong>
+  <%= @triangle.l1 %>
+</p>
+
+<p>
+  <strong>L2:</strong>
+  <%= @triangle.l2 %>
+</p>
+
+<p>
+  <strong>L3:</strong>
+  <%= @triangle.l3 %>
+</p>
+
+<%= link_to 'Edit', edit_triangle_path(@triangle) %> |
+<%= link_to 'Back', triangles_path %>
