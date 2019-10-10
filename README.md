@@ -47,3 +47,11 @@
 
   Métodos implementados no app/models/anagram.rb
     * is_anagram(string, string)
+
+- Última questão da Prova - I Unidade
+
+  Testes implementados no arquivo spec/models/triangle_spec.rb
+    * is_triangle
+
+  Métodos implementados no app/models/triangle.rb
+    * is_triangle(integer, integer, integer)
