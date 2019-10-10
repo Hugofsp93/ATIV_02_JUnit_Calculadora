@@ -34,9 +34,21 @@ RSpec.describe Triangle, type: :model do
     expect(triangle.is_triangle(3, 4, 2))
   end
   
-  # Inválido
+  # Inválido em valores (falha)
   it "is_invalid_triangle" do
     triangle = Triangle.new
     expect(triangle.is_triangle(1, 1, 3))
+  end
+
+  # Inválido missing_params
+  it "is_invalid_triangle" do
+    triangle = Triangle.new
+    expect(triangle.is_triangle(1, 3, nil))
+  end
+
+  # Inválido wrong_params
+  it "is_invalid_triangle" do
+    triangle = Triangle.new
+    expect(triangle.is_triangle(1, "x", 3))
   end
 end
